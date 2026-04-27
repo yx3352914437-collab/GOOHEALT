@@ -79,11 +79,12 @@ body{
     flex-direction: column;
     justify-content: space-between;
 }
+/* 关键：还原足部按摩器页面的图片比例 */
 .product-card img{
     width:100%;
-    height: 320px;
+    height: auto; /* 取消固定高度，按图片原始比例显示 */
+    max-height: 280px; /* 限制最大高度，防止溢出卡片 */
     object-fit: contain;
-    flex: 1;
     margin-bottom: 8px;
 }
 .product-card .model-name{
@@ -141,7 +142,7 @@ body{
 <a href="index.html">Домашняя страница</a>
 <a href="products.html">Центр продуктов</a>
 <a href="foot-massager.html">Массажер для ног</a>
-<a href="mat-massager.html">массажный матрас</a>
+<a href="mat-massager.html" class="active">массажный матрас</a>
 <a href="bodybuilding.html">Бодибилдинг</a>
 </nav>
 </header>
@@ -236,7 +237,9 @@ body{
 <div class="footer-qr">
 <p class="qr-text">Отсканируйте QR-код ниже<br>Scan the QR code ниже</p>
 <p>Наш магазин</p>
+<a href="https://www.ozon.ru/seller/goohealt/?miniapp=seller_3322412" target="_blank">
 <img src="images/ozon-qr.png" alt="QR-код OZON">
+</a>
 </div>
 </div>
 </footer>
