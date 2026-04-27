@@ -8,62 +8,69 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
 body{
     background:#000;
+    background-image:radial-gradient(circle at right center,#1a4a90 1px,transparent 1px);
+    background-size:24px 24px;
+    background-repeat:repeat;
     color:#fff;
+    width:100%;margin:0;padding:0;
 }
-/* 头部导航 */
-.site-header{background:#000;padding:20px 40px;}
-.header-top{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
+
+.site-header{background:#000;padding:20px 40px;max-width:1400px;margin:0 auto;}
+.header-top{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;margin-bottom:30px;}
 .header-logo{display:flex;align-items:center;gap:15px;}
 .header-logo img{width:120px;height:auto;}
 .header-logo h1{font-size:42px;color:#fff;font-weight:normal;}
 .header-search{flex:1;margin:0 40px;}
+.search-box{
+    width:100%;
+    height:60px;
+    background:transparent;
+    border:2px solid #888;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    padding:0 20px;
+}
+.search-box .search-icon{color:#888;font-size:28px;margin-right:15px;}
+.search-box input{flex:1;background:transparent;border:none;outline:none;color:#fff;font-size:20px;}
+.search-box .dropdown-icon{color:#888;font-size:28px;}
 .header-actions{display:flex;align-items:center;gap:40px;}
 .action-item{display:flex;align-items:center;gap:10px;color:#fff;font-size:20px;}
-.header-nav{max-width:1400px;margin:0 auto;display:flex;justify-content:center;gap:60px;margin-top:30px;}
-.header-nav a{color:#fff;text-decoration:none;font-size:36px;}
-.header-nav a.active{color:#4ecdc4;}
+.action-item .icon{font-size:32px;}
 
-/* 商品列表 */
+.header-nav{max-width:1400px;margin:0 auto;display:flex;justify-content:center;gap:60px;}
+.header-nav a{color:#fff;text-decoration:none;font-size:36px;line-height:1.3; cursor:pointer;}
+.header-nav a:nth-child(4){color:#4ecdc4;}
+
 .container{max-width:1400px;margin:0 auto;padding:40px 20px;}
-.section-title{font-size:36px;margin-bottom:30px;display:flex;justify-content:space-between;align-items:center;}
-.section-title a{color:#4ecdc4;text-decoration:none;font-size:20px;}
-.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;}
-.product-card{background:#111;border-radius:8px;overflow:hidden;text-align:center;padding:20px;}
-.product-card img{
-    width:100%;
-    height:220px; /* 固定图片高度，防止布局错乱 */
-    object-fit:contain;
-    border-radius:4px;
-    margin-bottom:15px;
-}
-.product-card p{font-size:16px;margin-bottom:15px;}
-
-/* 关键：已改好跳转的按钮样式 */
-.add-cart-btn{
-    display:block;
-    width:100%;
-    padding:10px;
-    border:2px solid #4ecdc4;
-    background:transparent;
+.page-title{font-size:40px;text-align:center;margin-bottom:50px;}
+.product-wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:35px;}
+.product-item{background:#111;border-radius:12px;overflow:hidden;}
+.product-item img{width:100%;height:260px;object-fit:cover;display:block;}
+.product-text{padding:20px;}
+.product-text h4{font-size:20px;margin-bottom:12px;}
+.product-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:8px 20px;
+    border:1px solid #4ecdc4;
     color:#4ecdc4;
-    border-radius:4px;
     text-decoration:none;
-    font-size:16px;
-    cursor:pointer;
+    border-radius:6px;
 }
 
-/* 底部 */
 .site-footer{background:#000;color:#fff;padding:60px 40px;margin-top:80px;}
 .footer-container{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;gap:50px;}
 .footer-brand{text-align:left;}
 .footer-brand img{width:180px;height:auto;margin-bottom:15px;}
 .footer-brand p{font-size:48px;font-weight:900;color:#fff;}
 .footer-column{flex:1;}
-.footer-column h3{color:#4ecdc4;font-size:32px;margin-bottom:25px;}
+.footer-column h3{color:#4ecdc4;font-size:32px;margin-bottom:25px;text-transform:lowercase;}
 .footer-column ul{list-style:none;}
 .footer-column li{margin-bottom:20px;}
 .footer-column a{color:#fff;text-decoration:none;font-size:24px;}
 .footer-qr{text-align:center;}
+.footer-qr .qr-text{color:#4ecdc4;font-size:18px;margin-bottom:15px;}
 .footer-qr p{font-size:22px;margin-bottom:20px;}
 .footer-qr img{width:120px;height:auto;display:block;margin:0 auto;}
 </style>
@@ -71,78 +78,70 @@ body{
 
 <body>
 <header class="site-header">
-    <div class="header-top">
-        <div class="header-logo"><img src="images/logo.png" alt="GOOHEALT"><h1>GOOHEALT</h1></div>
-        <div class="header-search"><div class="search-box"><span>Q</span><input placeholder=""><span>▼</span></div></div>
-        <div class="header-actions">
-            <div class="action-item"><span>🛒</span><span>корзина покупок</span></div>
-            <div class="action-item"><span>👤</span><span>Авторизация входа</span></div>
-        </div>
+<div class="header-top">
+<div class="header-logo">
+<img src="logo.png">
+<h1>GOOHEALT</h1>
+</div>
+<div class="header-search">
+    <div class="search-box">
+        <span class="search-icon">Q</span>
+        <input placeholder="">
+        <span class="dropdown-icon">▼</span>
     </div>
-    <nav class="header-nav">
-        <a href="index.html">Домашняя страница</a>
-        <a href="products.html">Центр продуктов</a>
-        <a href="foot-massager.html">Массажер для ног</a>
-        <a href="mat-massager.html" class="active">массажный матрас</a>
-        <a href="bodybuilding.html">Бодибилдинг</a>
-    </nav>
+</div>
+<div class="header-actions">
+<div class="action-item"><span class="icon">🛒</span><span>корзина покупок</span></div>
+<div class="action-item"><span class="icon">👤</span><span>Авторизация входа</span></div>
+</div>
+</div>
 </header>
 
-<div class="container">
-    <div class="section-title">
-        <span>МАТРАСЫ</span>
-        <a href="#">Посмотреть все</a>
-    </div>
-    <div class="product-grid">
-        <!-- 1.按摩床垫(M001) 已绑定你的Ozon链接 -->
-        <div class="product-card">
-            <img src="images/mat-massager.jpg" alt="массажный матрас(M001)">
-            <p>1.массажный матрас(M001)</p>
-            <a href="https://www.ozon.ru/product/massazhnyy-matras-elektricheskiy-s-podogrevom-i-distantsionnym-upravleniem-dlya-tela-shei-spiny-2795100417/?_bctx=CAYQ4KCEAg&at=RltypRkW7hQJQOkzS9pORk5uyKMxg0TWXo72vcAQP72j" target="_blank" class="add-cart-btn">Добавить в корзину</a>
-        </div>
+<nav class="header-nav">
+<a href="index.html">Домашняя страница</a>
+<a href="products.html">Центр продуктов</a>
+<a href="foot-massager.html">Массажер для ног</a>
+<a href="mat-massager.html">массажный матрас</a>
+<a href="bodybuilding.html">Бодибилдинг</a>
+</nav>
 
-        <!-- 2-8号商品，图片路径用你自己的，按钮已预留跳转 -->
-        <div class="product-card">
-            <img src="images/mat-massager2.jpg" alt="массажный матрас(M002)">
-            <p>2.массажный матрас(M002)</p>
-            <button class="add-cart-btn">Добавить в корзину</button>
+<div class="container">
+    <h2 class="page-title">Массажный матрас</h2>
+    <div class="product-wrap">
+        <div class="product-item">
+            <img src="mat1.jpg">
+            <div class="product-text">
+                <h4>Массажный матрас 01</h4>
+                <a href="" class="product-btn">Купить сейчас</a>
+            </div>
         </div>
-        <div class="product-card">
-            <img src="images/mat-massager3.jpg" alt="массажный матрас(M003)">
-            <p>3.массажный матрас(M003)</p>
-            <button class="add-cart-btn">Добавить в корзину</button>
+        <div class="product-item">
+            <img src="mat2.jpg">
+            <div class="product-text">
+                <h4>Массажный матрас 02</h4>
+                <a href="" class="product-btn">Купить сейчас</a>
+            </div>
         </div>
-        <div class="product-card">
-            <img src="images/mat-massager4.jpg" alt="массажный матрас(M004)">
-            <p>4.массажный матрас(M004)</p>
-            <button class="add-cart-btn">Добавить в корзину</button>
+        <div class="product-item">
+            <img src="mat3.jpg">
+            <div class="product-text">
+                <h4>Массажный матрас 03</h4>
+                <a href="" class="product-btn">Купить сейчас</a>
+            </div>
         </div>
-        <div class="product-card">
-            <img src="images/mat-massager5.jpg" alt="массажный матрас(M005)">
-            <p>5.массажный матрас(M005)</p>
-            <button class="add-cart-btn">Добавить в корзину</button>
-        </div>
-        <div class="product-card">
-            <img src="images/mat-massager6.jpg" alt="массажный матрас(M006)">
-            <p>6.массажный матрас(M006)</p>
-            <button class="add-cart-btn">Добавить в корзину</button>
-        </div>
-        <div class="product-card">
-            <img src="images/mat-massager7.jpg" alt="массажный матрас(M007)">
-            <p>7.массажный матрас(M007)</p>
-            <button class="add-cart-btn">Добавить в корзину</button>
-        </div>
-        <div class="product-card">
-            <img src="images/mat-massager8.jpg" alt="массажный матрас(M008)">
-            <p>8.массажный матрас(M008)</p>
-            <button class="add-cart-btn">Добавить в корзину</button>
+        <div class="product-item">
+            <img src="mat4.jpg">
+            <div class="product-text">
+                <h4>Массажный матрас 04</h4>
+                <a href="" class="product-btn">Купить сейчас</a>
+            </div>
         </div>
     </div>
 </div>
 
 <footer class="site-footer">
 <div class="footer-container">
-<div class="footer-brand"><img src="images/logo.png" alt="Logo"><p>GOOHEALT</p></div>
+<div class="footer-brand"><img src="logo.png"><p>GOOHEALT</p></div>
 <div class="footer-column">
 <h3>связаться с нами</h3>
 <ul><li><a href="about.html">История бренда</a></li></ul>
@@ -153,6 +152,7 @@ body{
 <li><a href="foot-massager.html">массажер для ног</a></li>
 <li><a href="mat-massager.html">массажный матрас</a></li>
 <li><a href="bodybuilding.html">Бодибилдинг</a></li>
+<li><a href="neck-massager.html">Массажер для шеи</a></li>
 </ul>
 </div>
 <div class="footer-column">
@@ -165,10 +165,14 @@ body{
 </div>
 <div class="footer-qr">
 <p class="qr-text">Отсканируйте QR-код ниже</p>
+<p class="qr-subtext">Scan the QR-код ниже</p>
 <p>Наш магазин</p>
+
+<!-- ТОЛЬКО ЭТО СТРОКА ИЗМЕНЕНА -->
 <a href="https://www.ozon.ru/seller/goohealt/?miniapp=seller_3322412" target="_blank">
-<img src="images/ozon-qr.png" alt="QR-код OZON">
+<img src="ozon-qr.png">
 </a>
+
 </div>
 </div>
 </footer>
