@@ -10,125 +10,132 @@ body{
     background:#000;
     color:#fff;
 }
-/* 头部导航 */
 .site-header{background:#000;padding:20px 40px;}
 .header-top{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
 .header-logo{display:flex;align-items:center;gap:15px;}
 .header-logo img{width:120px;height:auto;}
 .header-logo h1{font-size:42px;color:#fff;font-weight:normal;}
 .header-search{flex:1;margin:0 40px;}
+.search-box{
+    width:100%;height:60px;background:transparent;border:2px solid #888;border-radius:8px;
+    display:flex;align-items:center;padding:0 20px;
+}
+.search-box span{color:#888;font-size:28px;}
+.search-box input{flex:1;background:transparent;border:none;outline:none;color:#fff;font-size:20px;margin-left:15px;}
 .header-actions{display:flex;align-items:center;gap:40px;}
 .action-item{display:flex;align-items:center;gap:10px;color:#fff;font-size:20px;}
 .header-nav{max-width:1400px;margin:0 auto;display:flex;justify-content:center;gap:60px;margin-top:30px;}
 .header-nav a{color:#fff;text-decoration:none;font-size:36px;}
 .header-nav a.active{color:#4ecdc4;}
 
-/* 商品列表 */
 .container{max-width:1400px;margin:0 auto;padding:40px 20px;}
 .section-title{font-size:36px;margin-bottom:30px;display:flex;justify-content:space-between;align-items:center;}
-.section-title a{color:#4ecdc4;text-decoration:none;font-size:20px;}
 .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;}
-.product-card{background:#111;border-radius:8px;overflow:hidden;text-align:center;padding:20px;}
-.product-card img{width:100%;border-radius:4px;margin-bottom:15px;}
-.product-card p{font-size:16px;margin-bottom:15px;}
-
-/* ========== 关键：按钮样式 ========== */
+.product-card{background:#111;border-radius:8px;padding:20px;text-align:center;}
+.product-card img{width:100%;border-radius:8px;margin-bottom:15px;}
+.product-card p{margin-bottom:15px;}
 .add-cart-btn{
-    display:block;
-    width:100%;
-    padding:10px;
-    border:2px solid #4ecdc4;
-    background:transparent;
-    color:#4ecdc4;
-    border-radius:4px;
-    text-decoration:none;
-    font-size:16px;
-    cursor:pointer;
+    display:block;width:100%;padding:10px;
+    border:2px solid #4ecdc4;background:transparent;color:#4ecdc4;
+    border-radius:4px;text-decoration:none;cursor:pointer;
 }
+
+.site-footer{background:#000;color:#fff;padding:60px 40px;margin-top:80px;}
+.footer-container{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;gap:50px;}
+.footer-brand{text-align:left;}
+.footer-brand img{width:180px;height:auto;margin-bottom:15px;}
+.footer-brand p{font-size:48px;font-weight:900;color:#fff;}
+.footer-column{flex:1;}
+.footer-column h3{color:#4ecdc4;font-size:32px;margin-bottom:25px;}
+.footer-column li{margin-bottom:20px;list-style:none;}
+.footer-column a{color:#fff;text-decoration:none;font-size:24px;}
+.footer-qr{text-align:center;}
+.footer-qr p{font-size:22px;margin-bottom:20px;}
+.footer-qr img{width:120px;height:auto;display:block;margin:0 auto;}
 </style>
 </head>
-
 <body>
+
 <header class="site-header">
-    <div class="header-top">
-        <div class="header-logo"><img src="images/logo.png" alt="GOOHEALT"><h1>GOOHEALT</h1></div>
-        <div class="header-search"><div class="search-box"><span>Q</span><input placeholder=""><span>▼</span></div></div>
-        <div class="header-actions">
-            <div class="action-item"><span>🛒</span><span>корзина покупок</span></div>
-            <div class="action-item"><span>👤</span><span>Авторизация входа</span></div>
-        </div>
+<div class="header-top">
+<div class="header-logo"><img src="images/logo.png" alt="GOOHEALT"><h1>GOOHEALT</h1></div>
+<div class="header-search">
+    <div class="search-box">
+        <span>Q</span><input placeholder=""><span>▼</span>
     </div>
-    <nav class="header-nav">
-        <a href="index.html">Домашняя страница</a>
-        <a href="products.html">Центр продуктов</a>
-        <a href="foot-massager.html">Массажер для ног</a>
-        <a href="mat-massager.html" class="active">массажный матрас</a>
-        <a href="bodybuilding.html">Бодибилдинг</a>
-    </nav>
+</div>
+<div class="header-actions">
+<div class="action-item"><span>🛒</span><span>корзина покупок</span></div>
+<div class="action-item"><span>👤</span><span>Авторизация входа</span></div>
+</div>
+</div>
+<nav class="header-nav">
+<a href="index.html">Домашняя страница</a>
+<a href="products.html">Центр продуктов</a>
+<a href="foot-massager.html">Массажер для ног</a>
+<a href="mat-massager.html" class="active">массажный матрас</a>
+<a href="bodybuilding.html">Бодибилдинг</a>
+</nav>
 </header>
 
 <div class="container">
-    <div class="section-title">
-        <span>МАТРАСЫ</span>
-        <a href="#">Посмотреть все</a>
-    </div>
+    <h2 class="section-title">МАТРАСЫ</h2>
     <div class="product-grid">
-        <!-- 1.按摩床垫(M001) 已绑定你的Ozon链接 -->
+
         <div class="product-card">
-            <img src="images/mat-massager.jpg" alt="массажный матрас(M001)">
-            <p>1.массажный матрас(M001)</p>
-            <a href="https://www.ozon.ru/product/massazhnyy-matras-elektricheskiy-s-podogrevom-i-distantsionnym-upravleniem-dlya-tela-shei-spiny-2795100417/?_bctx=CAYQ4KCEAg&at=RltypRkW7hQJQOkzS9pORk5uyKMxg0TWXo72vcAQP72j" target="_blank" class="add-cart-btn">Добавить в корзину</a>
+            <img src="images/mat-massager.jpg">
+            <p>1. массажный матрас M001</p>
+            <a href="https://www.ozon.ru/product/massazhnyy-matras-elektricheskiy-s-podogrevom-i-distantsionnym-upravleniem-dlya-tela-shei-spiny-2795100417/" target="_blank" class="add-cart-btn">Добавить в корзину</a>
         </div>
 
-        <!-- 2.按摩床垫(M002) 模板，替换href即可 -->
         <div class="product-card">
-            <img src="images/mat-massager2.jpg" alt="массажный матрас(M002)">
-            <p>2.массажный матрас(M002)</p>
-            <a href="这里放M002的Ozon链接" target="_blank" class="add-cart-btn">Добавить в корзину</a>
+            <img src="images/mat2.jpg">
+            <p>2. массажный матрас M002</p>
+            <button class="add-cart-btn">Добавить в корзину</button>
         </div>
 
-        <!-- 3.按摩床垫(M003) 模板 -->
         <div class="product-card">
-            <img src="images/mat-massager3.jpg" alt="массажный матрас(M003)">
-            <p>3.массажный матрас(M003)</p>
-            <a href="这里放M003的Ozon链接" target="_blank" class="add-cart-btn">Добавить в корзину</a>
+            <img src="images/mat3.jpg">
+            <p>3. массажный матрас M003</p>
+            <button class="add-cart-btn">Добавить в корзину</button>
         </div>
 
-        <!-- 4.按摩床垫(M004) 模板 -->
         <div class="product-card">
-            <img src="images/mat-massager4.jpg" alt="массажный матрас(M004)">
-            <p>4.массажный матрас(M004)</p>
-            <a href="这里放M004的Ozon链接" target="_blank" class="add-cart-btn">Добавить в корзину</a>
+            <img src="images/mat4.jpg">
+            <p>4. массажный матрас M004</p>
+            <button class="add-cart-btn">Добавить в корзину</button>
         </div>
 
-        <!-- 5.按摩床垫(M005) 模板 -->
-        <div class="product-card">
-            <img src="images/mat-massager5.jpg" alt="массажный матрас(M005)">
-            <p>5.массажный матрас(M005)</p>
-            <a href="这里放M005的Ozon链接" target="_blank" class="add-cart-btn">Добавить в корзину</a>
-        </div>
-
-        <!-- 6.按摩床垫(M006) 模板 -->
-        <div class="product-card">
-            <img src="images/mat-massager6.jpg" alt="массажный матрас(M006)">
-            <p>6.массажный матрас(M006)</p>
-            <a href="这里放M006的Ozon链接" target="_blank" class="add-cart-btn">Добавить в корзину</a>
-        </div>
-
-        <!-- 7.按摩床垫(M007) 模板 -->
-        <div class="product-card">
-            <img src="images/mat-massager7.jpg" alt="массажный матрас(M007)">
-            <p>7.массажный матрас(M007)</p>
-            <a href="这里放M007的Ozon链接" target="_blank" class="add-cart-btn">Добавить в корзину</a>
-        </div>
-
-        <!-- 8.按摩床垫(M008) 模板 -->
-        <div class="product-card">
-            <img src="images/mat-massager8.jpg" alt="массажный матрас(M008)">
-            <p>8.массажный матрас(M008)</p>
-            <a href="这里放M008的Ozon链接" target="_blank" class="add-cart-btn">Добавить в корзину</a>
-        </div>
     </div>
 </div>
+
+<footer class="site-footer">
+<div class="footer-container">
+<div class="footer-brand"><img src="images/logo.png"><p>GOOHEALT</p></div>
+<div class="footer-column">
+<h3>связаться с нами</h3>
+<ul><li><a href="about.html">История бренда</a></li></ul>
+</div>
+<div class="footer-column">
+<h3>товар</h3>
+<ul>
+<li><a href="foot-massager.html">массажер для ног</a></li>
+<li><a href="mat-massager.html">массажный матрас</a></li>
+<li><a href="bodybuilding.html">Бодибилдинг</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h3>советоваться</h3>
+<ul><li><a href="contact.html">связаться с нами</a></li></ul>
+</div>
+<div class="footer-qr">
+<p>Наш магазин</p>
+<a href="https://www.ozon.ru/seller/goohealt/?miniapp=seller_3322412" target="_blank">
+<img src="images/ozon-qr.png">
+</a>
+</div>
+</div>
+</footer>
+
 </body>
 </html>
