@@ -1,349 +1,254 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GOOHEALT</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        body {
-            background: #000;
-            color: #fff;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        /* 头部导航 */
-        .site-header {
-            background: #000;
-            padding: 20px 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .header-top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-        .header-logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .header-logo img {
-            width: 30px;
-            height: auto;
-        }
-        .header-logo h1 {
-            font-size: 20px;
-            color: #fff;
-            font-weight: normal;
-        }
-        .header-search-bar {
-            display: flex;
-            align-items: center;
-            background: #111;
-            border: 1px solid #333;
-            border-radius: 4px;
-            padding: 0 10px;
-        }
-        .header-search-bar input {
-            background: transparent;
-            border: none;
-            outline: none;
-            color: #fff;
-            padding: 8px;
-        }
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-        .header-actions a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        /* 主导航菜单 */
-        .main-nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: flex-start;
-            gap: 60px;
-            padding: 10px 40px;
-        }
-        .main-nav a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-            line-height: 1.4;
-            cursor: pointer;
-        }
-        .main-nav a.active {
-            color: #4ec4c4;
-        }
-        /* 品牌标题 */
-        .brand-title {
-            font-size: 120px;
-            text-align: center;
-            margin: 20px 0;
-            color: #aaa;
-            opacity: 0.8;
-        }
-        /* 主产品banner */
-        .main-banner {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 40px;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .banner-img {
-            width: 400px;
-            height: auto;
-        }
-        .banner-text {
-            flex: 1;
-        }
-        .banner-text h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        .banner-features {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-        }
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 14px;
-        }
-        /* 产品分类 */
-        .section-title {
-            text-align: center;
-            margin: 40px 0 20px;
-            font-size: 20px;
-            position: relative;
-        }
-        .section-title::before,
-        .section-title::after {
-            content: "";
-            display: inline-block;
-            width: 100px;
-            height: 1px;
-            background: #fff;
-            vertical-align: middle;
-            margin: 0 20px;
-        }
-        .product-categories {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto 40px;
-            padding: 0 20px;
-        }
-        .category-item {
-            text-align: center;
-        }
-        .category-item img {
-            width: 100%;
-            max-width: 280px;
-            height: auto;
-            margin-bottom: 10px;
-        }
-        /* 新闻/产品列表 */
-        .news-section {
-            max-width: 1000px;
-            margin: 0 auto 60px;
-            padding: 0 20px;
-        }
-        .news-layout {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-        .news-item img {
-            width: 100%;
-            max-width: 280px;
-            height: auto;
-            margin-bottom: 10px;
-        }
-        /* 页脚 */
-        .site-footer {
-            background: #000;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: space-between;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .footer-logo img {
-            width: 40px;
-            height: auto;
-        }
-        .footer-links {
-            display: flex;
-            gap: 60px;
-        }
-        .footer-column h3 {
-            font-size: 14px;
-            color: #4ec4c4;
-            margin-bottom: 15px;
-        }
-        .footer-column ul {
-            list-style: none;
-        }
-        .footer-column ul li {
-            margin-bottom: 8px;
-        }
-        .footer-column ul li a {
-            color: #aaa;
-            text-decoration: none;
-            font-size: 12px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GOOHEALT </title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{
+    background:#000;
+    background-image:radial-gradient(circle at right center,#1a4a90 1px,transparent 1px);
+    background-size:24px 24px;
+    background-repeat:repeat;
+    color:#fff;
+    width:100%;margin:0;padding:0;
+}
+
+.site-header{background:#000;padding:20px 40px;max-width:1400px;margin:0 auto;}
+.header-top{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;margin-bottom:30px;}
+.header-logo{display:flex;align-items:center;gap:15px;}
+.header-logo img{width:120px;height:auto;}
+.header-logo h1{font-size:42px;color:#fff;font-weight:normal;}
+.header-search{flex:1;margin:0 40px;}
+.search-box{
+    width:100%;
+    height:60px;
+    background:transparent;
+    border:2px solid #888;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    padding:0 20px;
+}
+.search-box .search-icon{color:#888;font-size:28px;margin-right:15px;}
+.search-box input{flex:1;background:transparent;border:none;outline:none;color:#fff;font-size:20px;}
+.search-box .dropdown-icon{color:#888;font-size:28px;}
+.header-actions{display:flex;align-items:center;gap:40px;}
+.action-item{display:flex;align-items:center;gap:10px;color:#fff;font-size:20px;}
+.action-item .icon{font-size:32px;}
+
+.header-nav{max-width:1400px;margin:0 auto;display:flex;justify-content:center;gap:60px;}
+.header-nav a{color:#fff;text-decoration:none;font-size:36px;line-height:1.3;}
+.header-nav a:nth-child(1){color:#4ecdc4;}
+
+.top-banner{width:100%;height:auto;display:block;margin-bottom:20px;max-width:1400px;margin:0 auto;}
+.container{max-width:1400px;margin:0 auto;padding:0 20px;}
+
+.brand-title {
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+  font-size: 225px;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #b0d8e8, #222831);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  padding: 0px 0 25px 0;
+  line-height: 1;
+  max-width:1400px;
+  margin:0 auto;
+}
+
+.feature-section {
+    background:transparent;
+    padding: 0px 20px 25px 20px;
+    color: white;
+}
+.feature-container {max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:55px;}
+.feature-left{flex:1;}
+.feature-left img{width:100%;height:auto;display:block;border-radius:12px;}
+.feature-right{flex:1;}
+.feature-title{font-size:38px;font-weight:bold;margin-bottom:40px;line-height:1.4;color:#fff;}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px 35px;}
+.feature-item{display:flex;align-items:center;gap:12px;}
+.feature-item img{width:26px;height:26px;object-fit:contain;}
+.feature-item p{font-size:17px;line-height:1.4;color:#fff;}
+
+.section-title{
+    display:flex;align-items:center;justify-content:center;gap:20px;
+    margin:70px 0 30px 0;
+    max-width:1400px;margin:70px auto 30px auto;
+}
+.section-title .line{width:70px;height:2px;background:#fff;}
+.section-title h2{font-size:42px;font-weight:normal;}
+
+/* 文字调整：向右移动，完全在图片上 */
+.card-group{max-width:1400px;margin:0 auto;display:flex;gap:20px;padding:0 20px;}
+.card{flex:1;border-radius:12px;overflow:hidden;position:relative;height:300px;background:#000;}
+.card img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+}
+.card-text{
+    position:absolute;
+    top:20px;
+    left:40px; /* 👈 向右移动 */
+    z-index:999;
+}
+.card-text h3{font-size:22px;margin-bottom:12px;color:#000;font-weight:bold;}
+.card-btn{background:#000;color:#fff;border:none;padding:8px 16px;border-radius:4px;font-size:14px;cursor:pointer;}
+
+.news-layout {
+  max-width:1400px;margin:0 auto;padding:0 20px;
+  display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:24px;
+}
+.news-main {grid-row:1/3;align-self:center;}
+.news-main img {width:100%;height:auto;max-height:520px;object-fit:contain;border-radius:8px;display:block;}
+.news-top {grid-column:2;grid-row:1;}
+.news-top img {width:100%;height:100%;object-fit:contain;border-radius:8px;display:block;}
+.news-bottom {grid-column:2;grid-row:2;display:flex;gap:24px;}
+.news-bottom > div {flex:1;aspect-ratio:1/1;}
+.news-bottom img {width:100%;height:100%;object-fit:contain;border-radius:8px;display:block;}
+
+.site-footer{background:#000;color:#fff;padding:60px 40px;margin-top:80px;}
+.footer-container{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;gap:50px;}
+.footer-brand{text-align:left;}
+.footer-brand img{width:180px;height:auto;margin-bottom:15px;}
+.footer-brand p{font-size:48px;font-weight:900;color:#fff;}
+.footer-column{flex:1;}
+.footer-column h3{color:#4ecdc4;font-size:32px;margin-bottom:25px;text-transform:lowercase;}
+.footer-column ul{list-style:none;}
+.footer-column li{margin-bottom:20px;}
+.footer-column a{color:#fff;text-decoration:none;font-size:24px;}
+.footer-qr{text-align:center;}
+.footer-qr .qr-text{color:#4ecdc4;font-size:18px;margin-bottom:15px;}
+.footer-qr p{font-size:22px;margin-bottom:20px;}
+.footer-qr img{width:120px;height:auto;display:block;margin:0 auto;}
+</style>
 </head>
+
 <body>
-    <!-- 头部 -->
-    <header class="site-header">
-        <div class="header-top">
-            <div class="header-logo">
-                <img src="logo.png" alt="GOOHEALT Logo">
-                <h1>GOOHEALT</h1>
-            </div>
-            <div class="header-search-bar">
-                <input type="text" placeholder="Поиск...">
-                <span>▼</span>
-            </div>
-            <div class="header-actions">
-                <a href="#"><span>🛒</span> Корзина покупок</a>
-                <a href="#"><span>👤</span> Авторизация входа</a>
-            </div>
-        </div>
-    </header>
+<header class="site-header">
+<div class="header-top">
+<div class="header-logo">
+<img src="images/logo.png">
+<h1>GOOHEALT</h1>
+</div>
+<div class="header-search">
+    <div class="search-box">
+        <span class="search-icon">Q</span>
+        <input placeholder="">
+        <span class="dropdown-icon">▼</span>
+    </div>
+</div>
+<div class="header-actions">
+<div class="action-item"><span class="icon">🛒</span><span>корзина покупок</span></div>
+<div class="action-item"><span class="icon">👤</span><span>Авторизация входа</span></div>
+</div>
+</header>
 
-    <!-- 主导航 -->
-    <nav class="main-nav">
-        <a href="index.html" class="active">Домашняя страница</a>
-        <a href="products.html">Центр продуктов</a>
-        <a href="foot-massager.html">Массажер для ног</a>
-        <a href="mat-massager.html">Массажный матрас</a>
-        <a href="bodybuilding.html">Бодибилдинг</a>
-    </nav>
+<nav class="header-nav">
+<a href="index.html">Домашняя страница</a>
+<a href="products.html">Центр продуктов</a>
+<a href="foot-massager.html">Массажер для ног</a>
+<a href="mat-massager.html">массажный матрас</a>
+<a href="bodybuilding.html">Бодибилдинг</a>
+</nav>
+</header>
 
-    <!-- 品牌标题 -->
-    <div class="brand-title">GOOHEALT</div>
+<div class="brand-title">GOOHEALT</div>
 
-    <!-- 主产品Banner -->
-    <div class="main-banner">
-        <img src="banner-main.jpg" alt="Main Product" class="banner-img">
-        <div class="banner-text">
-            <h2>гарантия 1 год только замена без ремонта</h2>
-            <div class="banner-features">
-                <div class="feature-item"><span>📋</span> Всесторонний осмотр перед отправкой</div>
-                <div class="feature-item"><span>🛡️</span> Гарантированное качество</div>
-                <div class="feature-item"><span>🤝</span> Подходит для всех возрастов</div>
-                <div class="feature-item"><span>🎁</span> Подходит для личного использования или в качестве подарка</div>
-                <div class="feature-item"><span>🚶</span> Попрощайся с болью и недомоганиями</div>
+<section class="feature-section">
+    <div class="feature-container">
+        <div class="feature-left"><img src="images/banner.jpg"></div>
+        <div class="feature-right">
+            <h3 class="feature-title">гарантия 1 год только замена без ремонта</h3>
+            <div class="feature-grid">
+                <div class="feature-item"><img src="https://img.icons8.com/fluency/96/ffffff/search.png"><p>Всесторонний осмотр перед отправкой</p></div>
+                <div class="feature-item"><img src="https://img.icons8.com/fluency/96/ffffff/shield.png"><p>Гарантированное качество</p></div>
+                <div class="feature-item"><img src="https://img.icons8.com/fluency/96/ffffff/heart-handshake.png"><p>Подходит для всех возрастов</p></div>
+                <div class="feature-item"><img src="https://img.icons8.com/fluency/96/ffffff/gift.png"><p>Подходит для личного использования или в качестве подарка</p></div>
+                <div class="feature-item"><img src="https://img.icons8.com/fluency/96/ffffff/health.png"><p>Попрощайся с болью и недомоганиями</p></div>
             </div>
         </div>
     </div>
+</section>
 
-    <!-- 产品分类 -->
-    <div class="section-title">Категории продуктов</div>
-    <div class="product-categories">
-        <div class="category-item">
-            <img src="foot-massager.jpg" alt="Массажер для ног">
-            <p>Массажер для ног</p>
-            <a href="foot-massager.html">Посмотреть все</a>
-        </div>
-        <div class="category-item">
-            <img src="mat-massager.jpg" alt="Массажный матрас">
-            <p>Массажный матрас</p>
-            <a href="mat-massager.html">Посмотреть все</a>
-        </div>
-        <div class="category-item">
-            <img src="bodybuilding.jpg" alt="Бодибилдинг">
-            <p>Бодибилдинг</p>
-            <a href="bodybuilding.html">Посмотреть все</a>
+<div class="section-title">
+    <span class="line"></span>
+    <h2>Категории продуктов</h2>
+    <span class="line"></span>
+</div>
+<div class="card-group">
+    <div class="card">
+        <img src="images/foot.jpg">
+        <div class="card-text">
+            <h3>Массажер для ног</h3>
+            <button class="card-btn">Посмотреть все</button>
         </div>
     </div>
-
-    <!-- 新闻/产品列表 -->
-    <div class="section-title">Последние новости</div>
-    <div class="news-section">
-        <div class="news-layout">
-            <div class="news-item">
-                <img src="news1.jpg" alt="News 1">
-                <p>M009</p>
-            </div>
-            <div class="news-item">
-                <img src="news2.jpg" alt="News 2">
-                <p>M029</p>
-            </div>
-            <div class="news-item">
-                <img src="news3.jpg" alt="News 3">
-                <p>M028</p>
-            </div>
+    <div class="card">
+        <img src="images/mat.jpg">
+        <div class="card-text">
+            <h3>массажный матрас</h3>
+            <button class="card-btn">Посмотреть все</button>
         </div>
     </div>
+    <div class="card">
+        <img src="images/fit.jpg">
+        <div class="card-text">
+            <h3>Бодибилдинг</h3>
+            <button class="card-btn">Посмотреть все</button>
+        </div>
+    </div>
+</div>
 
-    <!-- 页脚 -->
-    <footer class="site-footer">
-        <div class="footer-logo">
-            <img src="logo.png" alt="GOOHEALT Logo">
-            <h2>GOOHEALT</h2>
-        </div>
-        <div class="footer-links">
-            <div class="footer-column">
-                <h3>Связаться с нами</h3>
-                <ul>
-                    <li><a href="#">История бренда</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Товар</h3>
-                <ul>
-                    <li><a href="foot-massager.html">Массажер для ног</a></li>
-                    <li><a href="mat-massager.html">Массажный матрас</a></li>
-                    <li><a href="bodybuilding.html">Бодибилдинг</a></li>
-                    <li><a href="#">Массажер для шеи</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Советоваться</h3>
-                <ul>
-                    <li><a href="#">Описание товара</a></li>
-                    <li><a href="#">Информация</a></li>
-                    <li><a href="#">Связаться с нами</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Сканируйте QR-код</h3>
-                <img src="ozon-qr.png" alt="QR Code">
-                <p>Наш магазин на Ozon</p>
-            </div>
-        </div>
-    </footer>
+<div class="section-title">
+    <span class="line"></span>
+    <h2>Последние новости</h2>
+    <span class="line"></span>
+</div>
+<div class="news-layout">
+  <div class="news-main"><img src="images/news1.jpg"></div>
+  <div class="news-top"><img src="images/news4.jpg"></div>
+  <div class="news-bottom"><div><img src="images/news2.jpg"></div><div><img src="images/news3.jpg"></div></div>
+</div>
+
+<footer class="site-footer">
+<div class="footer-container">
+<div class="footer-brand"><img src="images/logo.png"><p>GOOHEALT</p></div>
+<div class="footer-column">
+<h3>связаться с нами</h3>
+<ul><li><a href="about.html">История бренда</a></li></ul>
+</div>
+<div class="footer-column">
+<h3>товар</h3>
+<ul>
+<li><a href="foot-massager.html">массажер для ног</a></li>
+<li><a href="mat-massager.html">массажный матрас</a></li>
+<li><a href="bodybuilding.html">Бодибилдинг</a></li>
+<li><a href="neck-massager.html">Массажер для шеи</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h3>советоваться</h3>
+<ul>
+<li><a href="description.html">Описание товара</a></li>
+<li><a href="contact.html">сообщение</a></li>
+<li><a href="contact.html">связаться с нами</a></li>
+</ul>
+</div>
+<div class="footer-qr">
+<p class="qr-text">Отсканируйте QR-код ниже</p>
+<p class="qr-subtext">Scan the QR-код ниже</p>
+<p>Наш магазин</p>
+<img src="images/ozon-qr.png">
+</div>
+</footer>
+
 </body>
 </html>
