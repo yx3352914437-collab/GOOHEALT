@@ -39,7 +39,8 @@ body{
 .action-item .icon{font-size:32px;}
 
 .header-nav{max-width:1400px;margin:0 auto;display:flex;justify-content:center;gap:60px;}
-.header-nav a{color:#fff;text-decoration:none;font-size:36px;line-height:1.3;}
+/* 👇 只加了 cursor:pointer 让导航可以点击 */
+.header-nav a{color:#fff;text-decoration:none;font-size:36px;line-height:1.3; cursor:pointer;}
 .header-nav a:nth-child(1){color:#4ecdc4;}
 
 .top-banner{width:100%;height:auto;display:block;margin-bottom:20px;max-width:1400px;margin:0 auto;}
@@ -84,7 +85,6 @@ body{
 .section-title .line{width:70px;height:2px;background:#fff;}
 .section-title h2{font-size:42px;font-weight:normal;}
 
-/* 文字调整：向右移动，完全在图片上 */
 .card-group{max-width:1400px;margin:0 auto;display:flex;gap:20px;padding:0 20px;}
 .card{flex:1;border-radius:12px;overflow:hidden;position:relative;height:300px;background:#000;}
 .card img{
@@ -96,7 +96,7 @@ body{
 .card-text{
     position:absolute;
     top:20px;
-    left:40px; /* 👈 向右移动 */
+    left:40px;
     z-index:999;
 }
 .card-text h3{font-size:22px;margin-bottom:12px;color:#000;font-weight:bold;}
@@ -135,7 +135,7 @@ body{
 <header class="site-header">
 <div class="header-top">
 <div class="header-logo">
-<img src="images/logo.png">
+<img src="logo.png">
 <h1>GOOHEALT</h1>
 </div>
 <div class="header-search">
@@ -149,6 +149,7 @@ body{
 <div class="action-item"><span class="icon">🛒</span><span>корзина покупок</span></div>
 <div class="action-item"><span class="icon">👤</span><span>Авторизация входа</span></div>
 </div>
+</div>
 </header>
 
 <nav class="header-nav">
@@ -158,13 +159,12 @@ body{
 <a href="mat-massager.html">массажный матрас</a>
 <a href="bodybuilding.html">Бодибилдинг</a>
 </nav>
-</header>
 
 <div class="brand-title">GOOHEALT</div>
 
 <section class="feature-section">
     <div class="feature-container">
-        <div class="feature-left"><img src="images/banner.jpg"></div>
+        <div class="feature-left"><img src="banner.jpg"></div>
         <div class="feature-right">
             <h3 class="feature-title">гарантия 1 год только замена без ремонта</h3>
             <div class="feature-grid">
@@ -185,21 +185,21 @@ body{
 </div>
 <div class="card-group">
     <div class="card">
-        <img src="images/foot.jpg">
+        <img src="foot.jpg">
         <div class="card-text">
             <h3>Массажер для ног</h3>
             <button class="card-btn">Посмотреть все</button>
         </div>
     </div>
     <div class="card">
-        <img src="images/mat.jpg">
+        <img src="mat.jpg">
         <div class="card-text">
             <h3>массажный матрас</h3>
             <button class="card-btn">Посмотреть все</button>
         </div>
     </div>
     <div class="card">
-        <img src="images/fit.jpg">
+        <img src="fit.jpg">
         <div class="card-text">
             <h3>Бодибилдинг</h3>
             <button class="card-btn">Посмотреть все</button>
@@ -213,14 +213,14 @@ body{
     <span class="line"></span>
 </div>
 <div class="news-layout">
-  <div class="news-main"><img src="images/news1.jpg"></div>
-  <div class="news-top"><img src="images/news4.jpg"></div>
-  <div class="news-bottom"><div><img src="images/news2.jpg"></div><div><img src="images/news3.jpg"></div></div>
+  <div class="news-main"><img src="news1.jpg"></div>
+  <div class="news-top"><img src="news4.jpg"></div>
+  <div class="news-bottom"><div><img src="news2.jpg"></div><div><img src="news3.jpg"></div></div>
 </div>
 
 <footer class="site-footer">
 <div class="footer-container">
-<div class="footer-brand"><img src="images/logo.png"><p>GOOHEALT</p></div>
+<div class="footer-brand"><img src="logo.png"><p>GOOHEALT</p></div>
 <div class="footer-column">
 <h3>связаться с нами</h3>
 <ul><li><a href="about.html">История бренда</a></li></ul>
@@ -246,7 +246,8 @@ body{
 <p class="qr-text">Отсканируйте QR-код ниже</p>
 <p class="qr-subtext">Scan the QR-код ниже</p>
 <p>Наш магазин</p>
-<img src="images/ozon-qr.png">
+<img src="ozon-qr.png">
+</div>
 </div>
 </footer>
 
