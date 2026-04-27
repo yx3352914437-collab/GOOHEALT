@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Центр продуктов - GOOHEALT</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{
+    background:#000;
+    background-image:radial-gradient(circle at right center,#1a4a90 1px,transparent 1px);
+    background-size:24px 24px;
+    background-repeat:repeat;
+    color:#fff;
+    width:100%;margin:0;padding:0;
+}
+
+/* 顶部头部 导航恢复正常大小！不再放大 */
+.site-header{background:#000;padding:20px 40px;}
+.header-top{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;margin-bottom:30px;}
+.header-logo{display:flex;align-items:center;gap:15px;}
+.header-logo img{width:120px;height:auto;}
+.header-logo h1{font-size:42px;color:#fff;font-weight:normal;}
+.header-search{flex:1;margin:0 40px;}
+.search-box{
+    width:100%;
+    height:60px;
+    background:transparent;
+    border:2px solid #888;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    padding:0 20px;
+}
+.search-box .search-icon{color:#888;font-size:28px;margin-right:15px;}
+.search-box input{flex:1;background:transparent;border:none;outline:none;color:#fff;font-size:20px;}
+.search-box .dropdown-icon{color:#888;font-size:28px;}
+.header-actions{display:flex;align-items:center;gap:40px;}
+.action-item{display:flex;align-items:center;gap:10px;color:#fff;font-size:20px;}
+.action-item .icon{font-size:32px;}
+
+/* 导航恢复正常大小！不再放大！ */
+.header-nav{max-width:1400px;margin:0 auto;display:flex;justify-content:center;gap:60px;}
+.header-nav a{color:#fff;text-decoration:none;font-size:36px;}
+.header-nav a.active{color:#4ecdc4;}
+
+/* ==============================================
+重点：banner大图缩小！不和屏幕同宽！和导航栏一样宽！居中！
+============================================== */
+.top-banner{
+    width:1400px;
+    max-width:95%;
+    height:auto;
+    display:block;
+    margin:0 auto;
+    margin-bottom:20px;
+}
+
+.container{max-width:1400px;margin:0 auto;padding:0 20px;}
+
+/* 中间内容不变 */
+.main-title{text-align:center;font-size:40px;margin:50px 0;}
+.brand-box{
+    display:flex;
+    gap:40px;
+    align-items:center;
+    margin-bottom:60px;
+}
+.brand-img{flex:1;}
+.brand-img img{width:100%;}
+.brand-text{flex:1;font-size:18px;line-height:1.6;}
+.recommend-sub-title{text-align:center;font-size:36px;margin-bottom:15px;}
+.recommend-desc{text-align:center;margin-bottom:50px;font-size:16px;}
+.products-box{
+    display:flex;
+    gap:30px;
+}
+.product-item{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+}
+.product-item img{
+    width:100%;
+    border-radius:8px;
+}
+.product-btn{
+    background:#fff;
+    color:#000;
+    padding:10px 30px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:17px;
+}
+
+/* 底部不变 */
+.site-footer{background:#000;color:#fff;padding:60px 40px;margin-top:80px;}
+.footer-container{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;gap:50px;}
+.footer-brand{text-align:left;}
+.footer-brand img{width:180px;height:auto;margin-bottom:15px;}
+.footer-brand p{font-size:48px;font-weight:900;color:#fff;}
+.footer-column{flex:1;}
+.footer-column h3{color:#4ecdc4;font-size:32px;margin-bottom:25px;text-transform:lowercase;}
+.footer-column ul{list-style:none;}
+.footer-column li{margin-bottom:20px;}
+.footer-column a{color:#fff;text-decoration:none;font-size:24px;}
+.footer-qr{text-align:center;}
+.footer-qr .qr-text{color:#4ecdc4;font-size:18px;margin-bottom:15px;}
+.footer-qr p{font-size:22px;margin-bottom:20px;}
+.footer-qr img{width:120px;height:auto;display:block;margin:0 auto;}
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+<div class="header-top">
+<div class="header-logo"><img src="images/logo.png" alt="GOOHEALT Logo"><h1>GOOHEALT</h1></div>
+<div class="header-search">
+    <div class="search-box">
+        <span class="search-icon">Q</span>
+        <input placeholder="">
+        <span class="dropdown-icon">▼</span>
+    </div>
+</div>
+<div class="header-actions">
+<div class="action-item"><span class="icon">🛒</span><span>корзина покупок</span></div>
+<div class="action-item"><span class="icon">👤</span><span>Авторизация входа</span></div>
+</div>
+</div>
+
+<nav class="header-nav">
+<a href="index.html">Домашняя страница</a>
+<a href="products.html" class="active">Центр продуктов</a>
+<a href="foot-massager.html">Массажер для ног</a>
+<a href="mat-massager.html">массажный матрас</a>
+<a href="bodybuilding.html">Бодибилдинг</a>
+</nav>
+</header>
+
+<!-- banner已经缩小！不再全屏！和导航同宽居中 -->
+<img src="images/banner-neck.jpg" class="top-banner">
+
+<div class="container">
+    <h2 class="main-title">• Центр продуктов •</h2>
+    <div class="brand-box">
+        <div class="brand-img">
+            <img src="images/product-box.jpg">
+        </div>
+        <div class="brand-text">
+            <p>Мы GOOHEALT, являемся брендом, специализирующемся на домашнем медицинском оборудовании</p>
+            <p>В основном занимаемся массажерами для ног/спины/тела/тренажерами для фитнеса, оснащенными горячим компрессом и функциями многоуровневой регулировки,</p>
+            <p>Благодаря высокой стоимости и надежному качеству мы создаем удобные решения для отдыха дома или в офисе для пользователей.</p>
+        </div>
+    </div>
+
+    <h2 class="recommend-sub-title">• Особая рекомендация •</h2>
+    <p class="recommend-desc">Одно устройство удовлетворяет потребности всей семьи, подходит для пожилых людей и детей</p>
+
+    <div class="products-box">
+        <div class="product-item">
+            <img src="images/mat-massager.jpg">
+            <a href="mat-massager.html" class="product-btn">массажный матрас</a>
+        </div>
+        <div class="product-item">
+            <img src="images/foot-massager.jpg">
+            <a href="foot-massager.html" class="product-btn">массажер для ног</a>
+        </div>
+        <div class="product-item">
+            <img src="images/neck-massager.jpg">
+            <a href="chair-massager.html" class="product-btn">массаж каод</a>
+        </div>
+    </div>
+</div>
+
+<footer class="site-footer">
+<div class="footer-container">
+<div class="footer-brand"><img src="images/logo.png" alt="Logo"><p>GOOHEALT</p></div>
+<div class="footer-column">
+<h3>связаться с нами</h3>
+<ul><li><a href="about.html">История бренда</a></li></ul>
+</div>
+<div class="footer-column">
+<h3>товар</h3>
+<ul>
+<li><a href="foot-massager.html">массажер для ног</a></li>
+<li><a href="mat-massager.html">массажный матрас</a></li>
+<li><a href="bodybuilding.html">Бодибилдинг</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h3>советоваться</h3>
+<ul>
+<li><a href="description.html">Описание товара</a></li>
+<li><a href="contact.html">сообщение</a></li>
+<li><a href="contact.html">связаться с нами</a></li>
+</ul>
+</div>
+<div class="footer-qr">
+<p class="qr-text">Отсканируйте QR-код ниже<br>Scan the QR code ниже</p>
+<p>Наш магазин</p>
+<img src="images/ozon-qr.png" alt="QR-код OZON">
+</div>
+</div>
+</footer>
+
+</body>
+</html>
