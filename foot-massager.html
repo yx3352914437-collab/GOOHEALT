@@ -42,7 +42,6 @@ body{
 .header-nav a{color:#fff;text-decoration:none;font-size:36px;line-height:1.3;}
 .header-nav a:nth-child(3){color:#4ecdc4;}
 
-/* ✅ 统一修改：Banner完整显示，不裁切 */
 .top-banner{
     width:100%;
     max-width:1400px;
@@ -82,9 +81,9 @@ body{
 }
 .product-card img{
     width:100%;
-    height: 320px;
+    height: auto;
+    max-height: 280px;
     object-fit: contain;
-    flex: 1;
     margin-bottom: 8px;
 }
 .product-card .model-name{
@@ -102,6 +101,8 @@ body{
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
+    text-decoration: none;
+    display: block;
 }
 
 .site-footer{background:#000;color:#fff;padding:60px 40px;margin-top:60px;}
@@ -141,7 +142,7 @@ body{
 <nav class="header-nav">
 <a href="index.html">Домашняя страница</a>
 <a href="products.html">Центр продуктов</a>
-<a href="foot-massager.html">Массажер для ног</a>
+<a href="foot-massager.html" class="active">Массажер для ног</a>
 <a href="mat-massager.html">массажный матрас</a>
 <a href="bodybuilding.html">Бодибилдинг</a>
 </nav>
@@ -159,38 +160,45 @@ body{
 <div class="product-card">
 <img src="images/foot-m011.jpg" alt="массажер для ног(M011)">
 <div class="model-name">1.массажер для ног(M011)</div>
-<button class="cart-btn">добавить в корзину</button>
+<a href="https://www.ozon.ru/product/massazher-dlya-nog-elektricheskiy-s-podogrevom-v-tehnike-shiatsu-pultom-distantsionnogo-upravleniya-2804656349/?_bctx=CAQQrOTKAQ&at=XQtkgDooVh070wGQuBJqnL8toWVj3RiwKVVlYHRqzBqP&hs=1" target="_blank" class="cart-btn">добавить в корзину</a>
 </div>
+
 <div class="product-card">
 <img src="images/foot-m012.jpg" alt="массажер для ног(M012)">
 <div class="model-name">2.массажер для ног(M012)</div>
-<button class="cart-btn">добавить в корзину</button>
+<a href="https://www.ozon.ru/product/massazher-dlya-nog-shiatsu-elektricheskiy-s-podogrevom-vibratsiey-vozdushnym-2804687321/?_bctx=CAQQrOTKAQ&at=pZtpJO331cDvXwLnHwwBy7yC7x06k2CWMLrDyUW8XqW5&hs=1" target="_blank" class="cart-btn">добавить в корзину</a>
 </div>
+
 <div class="product-card">
 <img src="images/foot-m001.jpg" alt="массажер для ног(M001)">
 <div class="model-name">3.массажер для ног(M001)</div>
-<button class="cart-btn">добавить в корзину</button>
+<a href="https://www.ozon.ru/product/elektricheskiy-massazher-dlya-nog-s-podogrevom-3d-shiatsu-vibratsiya-vozdushnyy-kompressionnyy-2795262956/?_bctx=CAQQrOTKAQ&at=GRt2PO55KHy7Y8kJFBVXrE4hYGvDyoirmQv8VIWVKDjY&hs=1" target="_blank" class="cart-btn">добавить в корзину</a>
 </div>
+
 <div class="product-card">
 <img src="images/foot-m012-2.jpg" alt="массажер для ног(M012)">
 <div class="model-name">4.массажер для ног(M012)</div>
-<button class="cart-btn">добавить в корзину</button>
+<a href="https://www.ozon.ru/product/massazher-dlya-nog-s-funktsiey-ochistki-otritsatelnymi-ionami-3214842572/?_bctx=CAQQrOTKAQ&at=ywtAQ255qurG7yKwtj17kNrSP45KN8UO5wxX5CZ0mN51&hs=1" target="_blank" class="cart-btn">добавить в корзину</a>
 </div>
+
 <div class="product-card">
 <img src="images/foot-m028.jpg" alt="массажер для ног(M028)">
 <div class="model-name">5.массажер для ног(M028)</div>
-<button class="cart-btn">добавить в корзину</button>
+<a href="https://www.ozon.ru/product/massazher-dlya-nog-elektricheskiy-rolikovyy-s-podogrevom-limfodrenazhnyy-3214538478/?_bctx=CAQQrOTKAQ&at=6WtZg0YYjc48lRjniPBDJpgIWoPzgQuDMyXA4uOnQPWQ&hs=1" target="_blank" class="cart-btn">добавить в корзину</a>
 </div>
+
 <div class="product-card">
 <img src="images/foot-m015.jpg" alt="массажер для ног(M015)">
 <div class="model-name">6.массажер для ног(M015)</div>
-<button class="cart-btn">добавить в корзину</button>
+<a href="https://www.ozon.ru/product/elektricheskiy-massazher-dlya-nog-s-podogrevom-i-limfodrenazhem-snyatie-ustalosti-uluchshenie-2804820471/?at=qQtJxkjjKcNLz9rvFKVwJr6uZWPpK0sj3Kr08s9Lox38&from_sku=2804820471&oos_search=false" target="_blank" class="cart-btn">добавить в корзину</a>
 </div>
+
 <div class="product-card">
 <img src="images/foot-m037.jpg" alt="массажер для ног(M037)">
 <div class="model-name">7.массажер для ног(M037)</div>
-<button class="cart-btn">добавить в корзину</button>
+<a href="https://www.ozon.ru/product/universalnyy-massazher-dlya-nog-goleney-beder-i-ruk-3214856401/?_bctx=CAQQrOTKAQ&at=nRtr13NNAt1k6Pn0H9X4LEWfGA3YY4hYm4vGGf0Er201&hs=1" target="_blank" class="cart-btn">добавить в корзину</a>
 </div>
+
 <div class="product-card">
 <img src="images/foot-m003.jpg" alt="массажер для ног(M003)">
 <div class="model-name">8.массажер для ног(M003)</div>
@@ -214,6 +222,7 @@ body{
 <li><a href="foot-massager.html">массажер для ног</a></li>
 <li><a href="mat-massager.html">массажный матрас</a></li>
 <li><a href="bodybuilding.html">Бодибилдинг</a></li>
+<li><a href="neck-massager.html">Массажер для шеи</a></li>
 </ul>
 </div>
 
@@ -229,7 +238,9 @@ body{
 <div class="footer-qr">
 <p class="qr-text">Отсканируйте QR-код ниже<br>Scan the QR code ниже</p>
 <p>Наш магазин</p>
+<a href="https://www.ozon.ru/seller/goohealt/?miniapp=seller_3322412" target="_blank">
 <img src="images/ozon-qr.png" alt="QR-код OZON">
+</a>
 </div>
 </div>
 </footer>
