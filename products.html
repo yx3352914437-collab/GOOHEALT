@@ -90,33 +90,20 @@ body{
     font-size:17px;
 }
 
-/* 修复底部footer 尺寸/间距/比例 与全站其他页面完全一致 */
-.site-footer{
-    background:#000;
-    color:#fff;
-    padding:40px 20px;
-    margin-top:60px;
-}
-.footer-container{
-    max-width:1400px;
-    margin:0 auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap:30px;
-}
+.site-footer{background:#000;color:#fff;padding:60px 40px;margin-top:80px;}
+.footer-container{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;gap:50px;}
 .footer-brand{text-align:left;}
-.footer-brand img{width:150px;height:auto;margin-bottom:10px;}
-.footer-brand p{font-size:36px;font-weight:900;color:#fff;}
+.footer-brand img{width:180px;height:auto;margin-bottom:15px;}
+.footer-brand p{font-size:48px;font-weight:900;color:#fff;}
 .footer-column{flex:1;}
-.footer-column h3{color:#4ecdc4;font-size:24px;margin-bottom:15px;text-transform:lowercase;}
+.footer-column h3{color:#4ecdc4;font-size:32px;margin-bottom:25px;text-transform:lowercase;}
 .footer-column ul{list-style:none;}
-.footer-column li{margin-bottom:12px;}
-.footer-column a{color:#fff;text-decoration:none;font-size:18px;}
+.footer-column li{margin-bottom:20px;}
+.footer-column a{color:#fff;text-decoration:none;font-size:24px;}
 .footer-qr{text-align:center;}
-.footer-qr .qr-text{color:#4ecdc4;font-size:16px;margin-bottom:10px;}
-.footer-qr p{font-size:18px;margin-bottom:15px;}
-.footer-qr img{width:100px;height:auto;display:block;margin:0 auto;}
+.footer-qr .qr-text{color:#4ecdc4;font-size:18px;margin-bottom:15px;}
+.footer-qr p{font-size:22px;margin-bottom:20px;}
+.footer-qr img{width:120px;height:auto;display:block;margin:0 auto;}
 </style>
 </head>
 
@@ -186,7 +173,11 @@ body{
 <div class="footer-brand"><img src="logo.png" alt="Logo"><p>GOOHEALT</p></div>
 <div class="footer-column">
 <h3>связаться с нами</h3>
-<ul><li><a href="about.html">История бренда</a></li></ul>
+<ul>
+<li><a href="about.html">История бренда</a></li>
+<!-- 新增VK链接 新窗口打开 -->
+<li><a href="https://vk.com/id1101617704" target="_blank">VK</a></li>
+</ul>
 </div>
 <div class="footer-column">
 <h3>товар</h3>
