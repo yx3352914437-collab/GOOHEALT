@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Центр продуктов - GOOHEALT</title>
+<link rel="icon" href="images/favicon.png" type="image/png">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
 body{
@@ -15,9 +16,9 @@ body{
     width:100%;margin:0;padding:0;
 }
 
-.site-header{background:#000;padding:20px 40px;}
+.site-header{background:#000;padding:20px 40px;max-width:1400px;margin:0 auto;position: sticky; top: 0; z-index: 9999; box-shadow: 0 2px 10px rgba(0,0,0,0.3);}
 .header-top{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;margin-bottom:30px;}
-.header-logo{display:flex;align-items:center;gap:15px;}
+.header-logo{display:flex;align-items:center;gap:15px;text-decoration:none;}
 .header-logo img{width:120px;height:auto;}
 .header-logo h1{font-size:42px;color:#fff;font-weight:normal;}
 .header-search{flex:1;margin:0 40px;}
@@ -34,13 +35,42 @@ body{
 .search-box .search-icon{color:#888;font-size:28px;margin-right:15px;}
 .search-box input{flex:1;background:transparent;border:none;outline:none;color:#fff;font-size:20px;}
 .search-box .dropdown-icon{color:#888;font-size:28px;}
-.header-actions{display:flex;align-items:center;gap:40px;}
-.action-item{display:flex;align-items:center;gap:10px;color:#fff;font-size:20px;}
-.action-item .icon{font-size:32px;}
+.header-actions{display:flex;align-items:center;gap:20px;}
 
-.header-nav{max-width:1400px;margin:0 auto;display:flex;justify-content:center;gap:60px;}
-.header-nav a{color:#fff;text-decoration:none;font-size:36px;}
+.action-cart {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 30px;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+.action-cart:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.action-login {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 30px;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+.action-login:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.header-nav{max-width:1400px;margin:0 auto;display:flex;justify-content:center;gap:60px;padding-bottom:10px;}
+.header-nav a{color:#fff;text-decoration:none;font-size:36px;cursor:pointer;transition:0.2s;}
 .header-nav a.active{color:#4ecdc4;}
+.header-nav a:hover { color: #4ecdc4 !important; }
 
 .top-banner{
     width:1400px;
@@ -113,25 +143,28 @@ body{
 <div class="header-top">
 
 <a href="index.html" class="header-logo">
-<img src="logo.png" alt="GOOHEALT Logo"><h1>GOOHEALT</h1>
+<img src="images/logo.png" alt="GOOHEALT Logo"><h1>GOOHEALT</h1>
 </a>
 
 <div class="header-search">
     <div class="search-box">
-        <span class="search-icon">Q</span>
-        <input placeholder="">
+        <span class="search-icon">🔍</span>
+        <input placeholder="Поиск товаров">
         <span class="dropdown-icon">▼</span>
     </div>
 </div>
+
 <div class="header-actions">
-<div class="action-item"><span class="icon">🛒</span><span>корзина покупок</span></div>
-
-<!-- 已添加登录跳转 -->
-<a href="login.html" style="color:#fff;text-decoration:none;">
-<div class="action-item"><span class="icon">👤</span><span>Авторизация входа</span></div>
-</a>
-
+    <a href="index.html" class="action-cart">
+        <span>🛒</span>
+        <span>корзина</span>
+    </a>
+    <a href="login.html" class="action-login">
+        <span>👤</span>
+        <span>Вход</span>
+    </a>
 </div>
+
 </div>
 
 <nav class="header-nav">
@@ -179,7 +212,7 @@ body{
 
 <footer class="site-footer">
 <div class="footer-container">
-<div class="footer-brand"><img src="logo.png" alt="Logo"><p>GOOHEALT</p></div>
+<div class="footer-brand"><img src="images/logo.png" alt="Logo"><p>GOOHEALT</p></div>
 <div class="footer-column">
 <h3>связаться с нами</h3>
 <ul>
@@ -207,7 +240,7 @@ body{
 <p class="qr-text">Отсканируйте QR-код ниже<br>Scan the QR code ниже</p>
 <p>Наш магазин</p>
 <a href="https://www.ozon.ru/seller/goohealt" target="_blank">
-    <img src="ozon-qr.png" alt="QR-код OZON">
+    <img src="images/ozon-qr.png" alt="QR-код OZON">
 </a>
 </div>
 </div>
