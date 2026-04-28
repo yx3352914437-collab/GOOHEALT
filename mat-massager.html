@@ -82,7 +82,7 @@ body{
 .product-card img{
     width:100%;
     height: auto;
-    max-height: 280px;
+    max-height:280px;
     object-fit: contain;
     margin-bottom: 8px;
 }
@@ -125,7 +125,12 @@ body{
 <body>
 <header class="site-header">
 <div class="header-top">
-<div class="header-logo"><img src="images/logo.png" alt="GOOHEALT Logo"><h1>GOOHEALT</h1></div>
+
+<!-- 只在这里添加了Logo跳转首页，其余完全不变 -->
+<a href="index.html" class="header-logo">
+<img src="images/logo.png" alt="GOOHEALT Logo"><h1>GOOHEALT</h1>
+</a>
+
 <div class="header-search">
     <div class="search-box">
         <span class="search-icon">Q</span>
@@ -215,7 +220,6 @@ body{
 <h3>связаться с нами</h3>
 <ul>
 <li><a href="about.html">История бренда</a></li>
-<!-- VK 跳转链接 已添加 -->
 <li><a href="https://vk.com/id1101617704" target="_blank">VK</a></li>
 </ul>
 </div>
