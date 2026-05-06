@@ -9,13 +9,13 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
 body{
-    background:#D8D8D8; /* 深度刚好的高级深浅灰，不发黑、耐看高级质感 */
+    background:#EAEAEA; /* 高级浅灰底色，柔和不发黑 */
     background-image:none;
-    color:#222;
+    color:#222; /* 深灰文字，更清晰高级 */
     width:100%;margin:0;padding:0;
 }
 
-.site-header{background:#ffffff;padding:20px 40px;max-width:1400px;margin:0 auto;position: sticky; top: 0; z-index: 9999; box-shadow: 0 2px 10px rgba(0,0,0,0.08);}
+.site-header{background:#F5F5F5;padding:20px 40px;max-width:1400px;margin:0 auto;position: sticky; top: 0; z-index: 9999; box-shadow: 0 2px 10px rgba(0,0,0,0.08);}
 .header-top{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;margin-bottom:30px;}
 .header-logo{display:flex;align-items:center;gap:15px;text-decoration: none;}
 .header-logo img{width:120px;height:auto;}
@@ -25,13 +25,13 @@ body{
     width:100%;
     height:60px;
     background:transparent;
-    border:2px solid #aaaaaa;
+    border:2px solid #999;
     border-radius:8px;
     display:flex;align-items:center;padding:0 20px;
 }
-.search-box .search-icon{color:#555;font-size:28px;margin-right:15px;}
+.search-box .search-icon{color:#666;font-size:28px;margin-right:15px;}
 .search-box input{flex:1;background:transparent;border:none;outline:none;color:#222;font-size:20px;}
-.search-box .dropdown-icon{color:#555;font-size:28px;}
+.search-box .dropdown-icon{color:#666;font-size:28px;}
 .header-actions{display:flex;align-items:center;gap:20px;}
 
 .action-cart {
@@ -39,14 +39,14 @@ body{
     align-items: center;
     gap: 10px;
     padding: 10px 18px;
-    background: #cccccc;
+    background: #DCDCDC;
     border-radius: 30px;
     color: #222;
     font-size: 18px;
     text-decoration: none;
 }
 .action-cart:hover {
-    background: #bbbbbb;
+    background: #CCCCCC;
 }
 
 .action-login {
@@ -54,14 +54,14 @@ body{
     align-items: center;
     gap: 10px;
     padding: 10px 18px;
-    background: #cccccc;
+    background: #DCDCDC;
     border-radius: 30px;
     color: #222;
     font-size: 18px;
     text-decoration: none;
 }
 .action-login:hover {
-    background: #bbbbbb;
+    background: #CCCCCC;
 }
 
 .header-nav{max-width:1400px;margin:0 auto;display:flex;justify-content:center;gap:60px;padding-bottom: 10px;}
@@ -72,23 +72,20 @@ body{
 .top-banner{width:100%;height:auto;display:block;margin-bottom:20px;max-width:1400px;margin:0 auto;}
 .container{max-width:1400px;margin:0 auto;padding:0 20px;}
 
-/* 渐变GOOHEALT大标题保持不变，质感高级 */
 .brand-title {
   font-family: Arial, sans-serif;
   font-weight: 900;
-  font-size: 280px;
+  font-size: 225px;
   text-transform: uppercase;
-  background: linear-gradient(180deg, #8cb4c7, #3a4a5e);
+  background: linear-gradient(180deg, #5C7C99, #2D3A4A);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   text-align: center;
-  padding: 40px 0 50px 0;
+  padding: 0px 0 25px 0;
   line-height: 1;
-  max-width:100%;
+  max-width:1400px;
   margin:0 auto;
-  display:block;
-  width:100%;
 }
 
 .feature-section {
@@ -103,7 +100,7 @@ body{
 .feature-title{font-size:38px;font-weight:bold;margin-bottom:40px;line-height:1.4;color:#222;}
 .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px 35px;}
 .feature-item{display:flex;align-items:center;gap:12px;}
-.feature-item img{width:26px;height:26px;object-fit:contain;}
+.feature-item img{width:26px;height:26px;object-fit:contain;filter: invert(8%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(20%) contrast(90%);}
 .feature-item p{font-size:17px;line-height:1.4;color:#222;}
 
 .section-title{
@@ -115,7 +112,7 @@ body{
 .section-title h2{font-size:42px;font-weight:normal;color:#222;}
 
 .card-group{max-width:1400px;margin:0 auto;display:flex;gap:20px;padding:0 20px;}
-.card{flex:1;border-radius:12px;overflow:hidden;position:relative;height:300px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,0.12);}
+.card{flex:1;border-radius:12px;overflow:hidden;position:relative;height:300px;background:#fff;box-shadow: 0 3px 12px rgba(0,0,0,0.08);}
 .card img{
     width:100%;
     height:100%;
@@ -128,8 +125,8 @@ body{
     left:40px;
     z-index:999;
 }
-.card-text h3{font-size:22px;margin-bottom:12px;color:#222;font-weight:bold;}
-.card-btn{background:#222;color:#fff;border:none;padding:8px 16px;border-radius:4px;font-size:14px;text-decoration:none;}
+.card-text h3{font-size:22px;margin-bottom:12px;color:#111;font-weight:bold;}
+.card-btn{background:#333;color:#fff;border:none;padding:8px 16px;border-radius:4px;font-size:14px;text-decoration:none;}
 
 .news-layout {
   max-width:1400px;margin:0 auto;padding:0 20px;
@@ -143,20 +140,19 @@ body{
 .news-bottom > div {flex:1;aspect-ratio:1/1;}
 .news-bottom img {width:100%;height:100%;object-fit:contain;border-radius:8px;display:block;}
 
-/* 底部同步加深灰色，整体统一协调 */
-.site-footer{background:#c8c8c8;color:#222;padding:60px 40px;margin-top:80px;}
+.site-footer{background:#D1D1D1;color:#222;padding:60px 40px;margin-top:80px;}
 .footer-container{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;gap:50px;}
 .footer-brand{text-align:left;}
 .footer-brand img{width:180px;height:auto;margin-bottom:15px;}
 .footer-brand p{font-size:48px;font-weight:900;color:#222;}
 .footer-column{flex:1;}
-.footer-column h3{color:#4b998f;font-size:32px;margin-bottom:25px;text-transform:lowercase;}
+.footer-column h3{color:#3A6662;font-size:32px;margin-bottom:25px;text-transform:lowercase;}
 .footer-column ul{list-style:none;}
 .footer-column li{margin-bottom:20px;}
 .footer-column a{color:#222;text-decoration:none;font-size:24px;}
 .footer-qr{text-align:center;}
-.footer-qr .qr-text{color:#4b998f;font-size:18px;margin-bottom:15px;}
-.footer-qr p{font-size:22px;margin-bottom:20px;color:#222;}
+.footer-qr .qr-text{color:#3A6662;font-size:18px;margin-bottom:15px;}
+.footer-qr p{font-size:22px;margin-bottom:20px;}
 .footer-qr img{width:120px;height:auto;display:block;margin:0 auto;}
 </style>
 </head>
@@ -204,11 +200,11 @@ body{
         <div class="feature-right">
             <h3 class="feature-title">гарантия 1 год только замена без ремонта</h3>
             <div class="feature-grid">
-                <div class="feature-item"><img src="https://img.icons8.com/fluency/96/222222/search.png"><p>Всесторонний осмотр перед отправкой</p></div>
-                <div class="feature-item"><img src="https://img.icons8.com/fluency/96/222222/shield.png"><p>Гарантированное качество</p></div>
-                <div class="feature-item"><img src="https://img.icons8.com/fluency/96/222222/heart-handshake.png"><p>Подходит для всех возрастов</p></div>
-                <div class="feature-item"><img src="httpsimg.icons8.com/fluency/96/222222/gift.png"><p>Подходит для личного использования или в качестве подарка</p></div>
-                <div class="feature-item"><img src="https://img.icons8.com/fluency/96/222222/health.png"><p>Попрощайся с болью и недомоганиями</p></div>
+                <div class="feature-item"><img src="https://img.icons8.com/fluency/96/333333/search.png"><p>Всесторонний осмотр перед отправкой</p></div>
+                <div class="feature-item"><img src="https://img.icons8.com/fluency/96/333333/shield.png"><p>Гарантированное качество</p></div>
+                <div class="feature-item"><img src="https://img.icons8.com/fluency/96/333333/heart-handshake.png"><p>Подходит для всех возрастов</p></div>
+                <div class="feature-item"><img src="https://img.icons8.com/fluency/96/333333/gift.png"><p>Подходит для личного использования или в качестве подарка</p></div>
+                <div class="feature-item"><img src="https://img.icons8.com/fluency/96/333333/health.png"><p>Попрощайся с болью и недомоганиями</p></div>
             </div>
         </div>
     </div>
