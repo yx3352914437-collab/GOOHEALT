@@ -77,17 +77,20 @@ body{
   font-weight: 900;
   font-size: 225px;
   text-transform: uppercase;
-  background: linear-gradient(to bottom, #8bb3c7, #4a5b75);
+  background: linear-gradient(180deg, #6d9aaf, #445266);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   text-align: center;
-  padding: 0px 0 25px 0;
-  line-height: 1;
+  padding: 30px 0 40px 0;
+  line-height: 1.2;
   max-width:1400px;
   margin:0 auto;
-  letter-spacing: 12px;
-  transform: scaleX(1.1);
+  /* 横向拉长 + 字间距 */
+  letter-spacing: 10px;
+  transform: scaleX(1.08);
+  /* 防止文字上下被截断 */
+  overflow: visible;
 }
 
 .feature-section {
