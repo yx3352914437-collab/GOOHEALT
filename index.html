@@ -4,14 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GOOHEALT</title>
-<!-- 已添加网站图标 -->
 <link rel="icon" href="images/favicon.png" type="image/png">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
 body{
-    background:#F8F5F0; /* 暖米色背景 */
-    background-image:none; /* 去掉旧的点阵效果 */
-    color:#333; /* 文字改成深灰色，更柔和 */
+    background:#F8F5F0;
+    background-image:none;
+    color:#333;
     width:100%;margin:0;padding:0;
 }
 
@@ -75,22 +74,20 @@ body{
 .brand-title {
   font-family: Arial, sans-serif;
   font-weight: 900;
-  font-size: 225px;
+  font-size: 180px; /* 稍微缩小一点，防止太宽 */
   text-transform: uppercase;
   background: linear-gradient(180deg, #6d9aaf, #445266);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   text-align: center;
-  padding: 30px 0 40px 0;
-  line-height: 1.2;
-  max-width:1400px;
-  margin:0 auto;
-  /* 横向拉长 + 字间距 */
-  letter-spacing: 10px;
-  transform: scaleX(1.08);
-  /* 防止文字上下被截断 */
-  overflow: visible;
+  padding: 50px 0; /* 上下足够内边距 */
+  line-height: 1; /* 单行，不额外加高 */
+  max-width: 100%;
+  margin: 0 auto;
+  letter-spacing: 8px; /* 字间距拉开 */
+  transform: scaleX(1.05); /* 横向拉长一点点 */
+  overflow: visible !important; /* 强制不裁切 */
 }
 
 .feature-section {
