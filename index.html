@@ -8,7 +8,6 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
 
-/* 两边整体背景 浅灰色 */
 body{
     color:#fff;
     width:100%;
@@ -17,12 +16,11 @@ body{
     background: #e6e6e6;
 }
 
-/* 中间内容白色背景容器 */
 .wrap-main{
     background:#ffffff;
     max-width:1400px;
     margin:0 auto;
-    padding:0 20px;
+    padding:0;
 }
 
 .site-header{
@@ -95,32 +93,12 @@ body{
 .header-nav a.active{color:#4ecdc4;}
 .header-nav a:hover { color: #4ecdc4 !important; }
 
-/* 首页内容样式 */
-.container{max-width:1400px;margin:0 auto;padding:0 20px;}
-.feature-section {
-    padding: 40px 20px;
-    color: #222;
+/* 海报样式 */
+.banner-poster{
+    width:100%;
+    height:auto;
+    display:block;
 }
-.feature-title{
-    text-align:center;
-    font-size:28px;
-    margin-bottom:40px;
-    color:#222;
-}
-.feature-grid{
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap:25px;
-    margin-bottom:60px;
-}
-.feature-item{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    font-size:16px;
-    color:#222;
-}
-.feature-item img{width:26px;height:26px;object-fit:contain;}
 
 .section-title{
     display:flex;
@@ -136,6 +114,7 @@ body{
     display:flex;
     gap:20px;
     margin-bottom:60px;
+    padding:0 20px;
 }
 .card{
     flex:1;
@@ -176,6 +155,7 @@ body{
   grid-template-rows:auto auto;
   gap:24px;
   margin-bottom:60px;
+  padding:0 20px;
 }
 .news-main {grid-row:1/3;align-self:center;}
 .news-main img {width:100%;height:auto;object-fit:contain;border-radius:8px;display:block;}
@@ -237,20 +217,11 @@ body{
 </nav>
 </header>
 
-<!-- 中间内容包裹层 白色背景 -->
 <div class="wrap-main">
-<!-- 保留你所有原始内容 -->
-<section class="feature-section">
-    <div class="feature-title">гарантия 1 год только замена без ремонта</div>
-    <div class="feature-grid">
-        <div class="feature-item"><img src="https://img.icons8.com/fluency/96/333333/search.png"><p>Всесторонний осмотр перед отправкой</p></div>
-        <div class="feature-item"><img src="https://img.icons8.com/fluency/96/333333/shield.png"><p>Гарантированное качество</p></div>
-        <div class="feature-item"><img src="https://img.icons8.com/fluency/96/333333/heart-handshake.png"><p>Подходит для всех возрастов</p></div>
-        <div class="feature-item"><img src="https://img.icons8.com/fluency/96/333333/gift.png"><p>Подходит для личного использования или в качестве подарка</p></div>
-        <div class="feature-item"><img src="https://img.icons8.com/fluency/96/333333/health.png"><p>Попрощайся с болью и недомоганиями</p></div>
-    </div>
-</section>
+<!-- 这里是你的海报图，路径已经改成 images/banner-new.jpg -->
+<img src="images/banner-new.jpg" alt="постер" class="banner-poster">
 
+<!-- 下面保留原有分类和新闻不变 -->
 <div class="section-title">
     <span class="line"></span>
     <h2>Категории продуктов</h2>
@@ -291,7 +262,6 @@ body{
   <div class="news-bottom"><div><img src="news2.jpg"></div><div><img src="news3.jpg"></div></div>
 </div>
 </div>
-<!-- /中间白色内容结束 -->
 
 <footer class="site-footer">
 <div class="footer-container">
