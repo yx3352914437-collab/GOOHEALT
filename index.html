@@ -8,9 +8,19 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
 
+/* 两侧浅色系背景 */
 body{
     color:#fff;
-    width:100%;margin:0;padding:0;
+    width:100%;
+    margin:0;
+    padding:0;
+    background-color: #eef0f2;
+}
+
+/* 中间内容容器：保留原深色渐变所有样式不变 */
+.wrap {
+    max-width: 1400px;
+    margin: 0 auto;
     background: linear-gradient(-45deg, #101010, #141414, #0a0a0a, #111111);
     background-size: 400% 400%;
     animation: gradientBg 15s ease infinite;
@@ -184,6 +194,9 @@ body{
 </head>
 
 <body>
+<!-- 统一包裹层：修复点击问题 -->
+<div class="wrap">
+
 <header class="site-header">
 <div class="header-top">
 <a href="index.html" class="header-logo">
@@ -309,5 +322,6 @@ body{
 </div>
 </footer>
 
+</div>
 </body>
 </html>
