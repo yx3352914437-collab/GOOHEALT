@@ -9,17 +9,14 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
 
-/* 新增：高级浅灰 + 缓慢流动渐变动画背景 */
 body{
-    background: #e5e5e5;
     color:#222;
     width:100%;margin:0;padding:0;
-    /* 流动渐变 */
+    /* 高级浅灰流动背景动画 */
     background: linear-gradient(-45deg, #e2e2e2, #ececec, #dcdcdc, #e8e8e8);
     background-size: 400% 400%;
     animation: gradientBg 15s ease infinite;
 }
-/* 背景渐变动画关键帧 */
 @keyframes gradientBg {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -91,21 +88,22 @@ body{
 .top-banner{width:100%;height:auto;display:block;margin-bottom:20px;max-width:1400px;margin:0 auto;}
 .container{max-width:1400px;margin:0 auto;padding:0 20px;}
 
+/* 已修复：品牌大字完整显示、不裁切、上下空间充足 */
 .brand-title {
   font-family: Arial, sans-serif;
   font-weight: 900;
-  font-size: 225px;
+  font-size: 180px;
   text-transform: uppercase;
   background: linear-gradient(180deg, #5C7C99, #2D3A4A);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   text-align: center;
-  padding: 30px 0 40px 0;
+  padding: 60px 0;
   line-height: 1.2;
-  max-width:1400px;
-  margin:0 auto;
-  letter-spacing: 8px;
+  max-width: 100%;
+  margin: 0 auto;
+  letter-spacing: 6px;
   transform: scaleX(1.05);
   overflow: visible !important;
 }
@@ -160,7 +158,7 @@ body{
 .news-top img {width:100%;height:100%;object-fit:contain;border-radius:8px;display:block;}
 .news-bottom {grid-column:2;grid-row:2;display:flex;gap:24px;}
 .news-bottom > div {flex:1;aspect-ratio:1/1;}
-.news-bottom img {width:100%;height:100%;object-fit:contain;border-radius:8px;display:block;}
+.news-bottom img{width:100%;height:100%;object-fit:contain;border-radius:8px;display:block;}
 
 .site-footer{background:#d1d1d1;color:#222;padding:60px 40px;margin-top:80px;}
 .footer-container{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;gap:50px;}
@@ -286,7 +284,7 @@ body{
 <h3>товар</h3>
 <ul>
 <li><a href="foot-massager.html">массажер для ног</a></li>
-<li><a href="mat-massager.html">массажный матрас</li>
+<li><a href="mat-massager.html">массажный матрас</a></li>
 <li><a href="bodybuilding.html">Бодибилдинг</a></li>
 <li><a href="neck-massager.html">Массажер для шеи</a></li>
 </ul>
