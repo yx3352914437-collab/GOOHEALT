@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GOOHEALT</title>
-<!-- 已添加网站图标 -->
 <link rel="icon" href="images/favicon.png" type="image/png">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
@@ -12,7 +11,6 @@
 body{
     color:#222;
     width:100%;margin:0;padding:0;
-    /* 高级浅灰流动背景动画 */
     background: linear-gradient(-45deg, #e2e2e2, #ececec, #dcdcdc, #e8e8e8);
     background-size: 400% 400%;
     animation: gradientBg 15s ease infinite;
@@ -82,7 +80,7 @@ body{
 
 .header-nav{max-width:1400px;margin:0 auto;display:flex;justify-content:center;gap:60px;padding-bottom: 10px;}
 .header-nav a{color:#333;text-decoration:none;font-size:36px;line-height:1.3; cursor:pointer;transition: 0.2s;}
-.header-nav a:nth-child(1){color:#4ecdc4;}
+.header-nav a.active{color:#4ecdc4;}
 .header-nav a:hover { color: #4ecdc4 !important; }
 
 .top-banner{width:100%;height:auto;display:block;margin-bottom:20px;max-width:1400px;margin:0 auto;}
@@ -184,7 +182,7 @@ body{
 </div>
 
 <nav class="header-nav">
-<a href="index.html">Домашняя страница</a>
+<a href="index.html" class="active">Домашняя страница</a>
 <a href="products.html">Центр продуктов</a>
 <a href="foot-massager.html">Массажер для ног</a>
 <a href="mat-massager.html">массажный матрас</a>
@@ -192,7 +190,6 @@ body{
 </nav>
 </header>
 
-<!-- 已删除品牌大字GOOHEALT，下面内容直接上移 -->
 <section class="feature-section">
     <div class="feature-container">
         <div class="feature-left"><img src="banner.jpg"></div>
