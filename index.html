@@ -4,23 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GOOHEALT</title>
-<!-- 已添加网站图标 -->
 <link rel="icon" href="images/favicon.png" type="image/png">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
 
+/* 修改背景为浅灰色，和你健身页面一致 */
 body{
     color:#222;
-    width:100%;margin:0;padding:0;
-    /* 高级浅灰流动背景动画 */
-    background: linear-gradient(-45deg, #e2e2e2, #ececec, #dcdcdc, #e8e8e8);
-    background-size: 400% 400%;
-    animation: gradientBg 15s ease infinite;
-}
-@keyframes gradientBg {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    width:100%;
+    margin:0;
+    padding:0;
+    background: #e6e6e6;
 }
 
 .site-header{
@@ -60,6 +54,7 @@ body{
     color: #222;
     font-size: 18px;
     text-decoration: none;
+    pointer-events: auto !important;
 }
 .action-cart:hover {
     background: #cccccc;
@@ -75,13 +70,34 @@ body{
     color: #222;
     font-size: 18px;
     text-decoration: none;
+    pointer-events: auto !important;
 }
 .action-login:hover {
     background: #cccccc;
 }
 
-.header-nav{max-width:1400px;margin:0 auto;display:flex;justify-content:center;gap:60px;padding-bottom: 10px;}
-.header-nav a{color:#333;text-decoration:none;font-size:36px;line-height:1.3; cursor:pointer;transition: 0.2s;}
+.header-nav{
+    max-width:1400px;
+    margin:0 auto;
+    display:flex;
+    justify-content:center;
+    gap:60px;
+    padding-bottom: 10px;
+    position: relative;
+    z-index: 10000;
+    pointer-events: auto !important;
+}
+.header-nav a{
+    color:#333;
+    text-decoration:none;
+    font-size:36px;
+    line-height:1.3;
+    cursor:pointer;
+    transition: 0.2s;
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 10;
+}
 .header-nav a:nth-child(1){color:#4ecdc4;}
 .header-nav a:hover { color: #4ecdc4 !important; }
 
@@ -126,7 +142,7 @@ body{
     z-index:999;
 }
 .card-text h3{font-size:22px;margin-bottom:12px;color:#111;font-weight:bold;}
-.card-btn{background:#333;color:#fff;border:none;padding:8px 16px;border-radius:4px;font-size:14px;text-decoration:none;}
+.card-btn{background:#333;color:#fff;border:none;padding:8px 16px;border-radius:4px;font-size:14px;text-decoration:none;pointer-events: auto !important;}
 
 .news-layout {
   max-width:1400px;margin:0 auto;padding:0 20px;
@@ -149,7 +165,7 @@ body{
 .footer-column h3{color:#3A6662;font-size:32px;margin-bottom:25px;text-transform:lowercase;}
 .footer-column ul{list-style:none;}
 .footer-column li{margin-bottom:20px;}
-.footer-column a{color:#222;text-decoration:none;font-size:24px;}
+.footer-column a{color:#222;text-decoration:none;font-size:24px;pointer-events: auto !important;}
 .footer-qr{text-align:center;}
 .footer-qr .qr-text{color:#3A6662;font-size:18px;margin-bottom:15px;}
 .footer-qr p{font-size:22px;margin-bottom:20px;}
@@ -161,7 +177,7 @@ body{
 <header class="site-header">
 <div class="header-top">
 <a href="index.html" class="header-logo">
-<img src="images/logo.png">
+<img src="logo.png">
 <h1>GOOHEALT</h1>
 </a>
 <div class="header-search">
@@ -184,7 +200,7 @@ body{
 </div>
 
 <nav class="header-nav">
-<a href="index.html">Домашняя страница</a>
+<a href="index.html" class="active">Домашняя страница</a>
 <a href="products.html">Центр продуктов</a>
 <a href="foot-massager.html">Массажер для ног</a>
 <a href="mat-massager.html">массажный матрас</a>
@@ -192,7 +208,6 @@ body{
 </nav>
 </header>
 
-<!-- 已删除品牌大字GOOHEALT，下面内容直接上移 -->
 <section class="feature-section">
     <div class="feature-container">
         <div class="feature-left"><img src="banner.jpg"></div>
@@ -251,7 +266,7 @@ body{
 
 <footer class="site-footer">
 <div class="footer-container">
-<div class="footer-brand"><img src="images/logo.png"><p>GOOHEALT</p></div>
+<div class="footer-brand"><img src="logo.png"><p>GOOHEALT</p></div>
 <div class="footer-column">
 <h3>связаться с нами</h3>
 <ul>
