@@ -6,31 +6,25 @@
 <title>GOOHEALT</title>
 <link rel="icon" href="images/favicon.png">
 <style>
-body { margin:0; padding:0; font-family:Arial; }
-.nav {
-    background:#eee;
-    padding:20px;
-    text-align:center;
-}
-.nav a {
-    font-size:20px;
-    margin:0 15px;
-    color:#000;
-    text-decoration:none;
-}
-.nav a:hover { color:#4ecdc4; }
+body{margin:0;padding:0;font-family:Arial,sans-serif;background:#eee;}
+.nav{background:#ddd;padding:25px;text-align:center;}
+.nav a{font-size:24px;margin:0 20px;color:#333;text-decoration:none;}
+/* 只有首页高亮 */
+.nav a.active{color:#4ecdc4;font-weight:bold;}
+.nav a:hover{color:#4ecdc4;}
 </style>
 </head>
 <body>
 
-<!-- 最简单导航，绝对能点击 -->
 <div class="nav">
-    <a href="index.html">Домашняя страница</a>
+    <a href="index.html" class="active">Домашняя страница</a>
     <a href="products.html">Центр продуктов</a>
     <a href="foot-massager.html">Массажер для ног</a>
     <a href="mat-massager.html">массажный матрас</a>
     <a href="bodybuilding.html">Бодибилдинг</a>
 </div>
+
+<h1 style="text-align:center;margin-top:50px;">Это настоящая Главная страница</h1>
 
 </body>
 </html>
