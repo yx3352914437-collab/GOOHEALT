@@ -16,6 +16,12 @@ body{
     padding:0;
     background: #e6e6e6;
 }
+/* 中间内容白色背景容器 */
+.wrap-main{
+    background:#ffffff;
+    max-width:1400px;
+    margin:0 auto;
+}
 
 .site-header{
     background:#f3f3f3;
@@ -206,10 +212,12 @@ body{
 </nav>
 </header>
 
-<!-- 3. 调整内容结构，和截图完全一致 -->
+<!-- 中间白色内容包裹层 -->
+<div class="wrap-main">
+<!-- 已把 banner.jpg 改成你新图 images/banner-new.jpg -->
 <section class="feature-section">
     <div class="feature-container">
-        <div class="feature-left"><img src="banner.jpg"></div>
+        <div class="feature-left"><img src="images/banner-new.jpg"></div>
         <div class="feature-right">
             <h3 class="feature-title">гарантия 1 год только замена без ремонта</h3>
             <div class="feature-grid">
@@ -262,6 +270,8 @@ body{
   <div class="news-top"><img src="news4.jpg"></div>
   <div class="news-bottom"><div><img src="news2.jpg"></div><div><img src="news3.jpg"></div></div>
 </div>
+</div>
+<!-- 中间白色内容结束 -->
 
 <footer class="site-footer">
 <div class="footer-container">
