@@ -32,7 +32,8 @@ body{
 }
 .header-top{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;margin-bottom:30px;}
 .header-logo{display:flex;align-items:center;gap:15px;text-decoration: none;}
-.header-logo img{width:120px;height:auto;}
+/* Logo放大 120px → 150px */
+.header-logo img{width:150px;height:auto;}
 .header-logo h1{font-size:42px;color:#222;font-weight:normal;}
 .header-search{flex:1;margin:0 40px;}
 .search-box{
@@ -48,12 +49,14 @@ body{
 .search-box .dropdown-icon{color:#666;font-size:28px;}
 .header-actions{display:flex;align-items:center;gap:20px;}
 
+/* 加边框 border:2px solid #4ecdc4 */
 .action-cart {
     display: inline-flex;
     align-items: center;
     gap: 10px;
     padding: 10px 18px;
     background: #dcdcdc;
+    border:2px solid #4ecdc4;
     border-radius: 30px;
     color: #222;
     font-size: 18px;
@@ -67,6 +70,7 @@ body{
     gap: 10px;
     padding: 10px 18px;
     background: #dcdcdc;
+    border:2px solid #4ecdc4;
     border-radius: 30px;
     color: #222;
     font-size: 18px;
