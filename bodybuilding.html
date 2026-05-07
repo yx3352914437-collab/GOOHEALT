@@ -10,7 +10,15 @@
 body{
     color:#222;
     width:100%;margin:0;padding:0;
-    background: #f9f9f9;
+    /* 和首页完全同款渐变流动浅背景 */
+    background: linear-gradient(-45deg, #e2e2e2, #ececec, #dcdcdc, #e8e8e8);
+    background-size: 400% 400%;
+    animation: gradientBg 15s ease infinite;
+}
+@keyframes gradientBg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .site-header{
