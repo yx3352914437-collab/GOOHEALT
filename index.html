@@ -2,7 +2,8 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 关键：手机强制按电脑原版尺寸显示，不变竖排、不乱版 -->
+<meta name="viewport" content="width=1400">
 <title>GOOHEALT</title>
 <link rel="icon" href="images/favicon.png" type="image/png">
 <style>
@@ -141,15 +142,6 @@ body{
 .footer-qr .qr-text{color:#3A6662;font-size:18px;margin-bottom:15px;}
 .footer-qr p{font-size:22px;margin-bottom:20px;}
 .footer-qr img{width:120px;height:auto;display:block;margin:0 auto;}
-
-/* 极简手机适配 不改动任何图片样式 */
-@media (max-width: 768px) {
-  .header-top { flex-direction: column; }
-  .header-nav { flex-direction: column; gap: 20px; }
-  .card-group { flex-direction: column; }
-  .news-layout { display: block; }
-  .footer-container { flex-direction: column; }
-}
 </style>
 </head>
 
